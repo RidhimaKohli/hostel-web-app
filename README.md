@@ -10,19 +10,31 @@ An app to manage the processes for hostels of IIT Jodhpur.
 
 1. Fork and clone this repository. Press the fork button on the top right of this page. Then on your console type `git clone https://github.com/<your-username>/hostel-web-app`. Make sure to replace `<your-username>` with your github username.
 
-Note: If on windows, you can skip steps 2-6 and skip step 7.
+   **Note**: If on Windows, you can skip steps 3-6 by just executing the "SETUP_ENV.bat" file. After the batch file has been executed, follow step 5 whenever you open a new console for this project.
 
 2. Navigate to the project folder. Enter `cd hostel-web-app` on your console to shift to the current project folder.
 
-3. Setup of virtual environment.
-   Use any virtual management tool, either `conda` or the `virtualenv` package. `virtualenv` is preffered. To install `virtualenv` enter
+3. Setup the virtual environment.
+   Use any virtual management tool, either `conda` or the `virtualenv` package. `virtualenv` is preffered for this project. To install `virtualenv` enter
    `pip install virtualenv` on your console.
 
-Note: Use `pip3` instead of `pip` if you use pip3 to install packages for your python3 installation.
+   **Note**: Use `pip3` instead of `pip` if you use pip3 to install packages for your python3 installation.
 
-4. Create a new virtual environment. Navigate to your To create a new environment for this project, type `virtualenv hostel-app` on your console. This will create a virtual environment in python to install all our dependencies.
+4. Create a new virtual environment. To create a new environment for this project, type `virtualenv hostel-app` on your console. This will create a virtual environment in python to install all our dependencies.
 
-5. Activate the environment. To activate the environment,
+   You can name your environment whatever you want. However to follow along with the steps and compatibility, the name "hostel-app" is preferred.
+
+5. Activate the environment. To activate the environment, follow the instructions:
+
+   On windows: `/hostel-app/Scripts/activate`
+
+   On Linux/MacOs: `source hostel-app/bin/activate`
+
+   If activation is successful, you will see `(hostel-app)` as a prefix to every prompt in your console.
+
+6. Install dependencies. Installing all the dependencies is quite simple, just type `pip install -r requirements.txt` on your console. It should install all the dependencies automatically for you. Repeat this step whenever a new dependency is added/removed.
+
+Whenever you close the current terminal window, activate the virtual environment again by following step 5.
 
 ## Team
 
