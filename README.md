@@ -11,3 +11,4 @@ An app to manage the processes for hostels of IIT Jodhpur.
 | -----------  | ---------------------- | --------------------------------------------------- |
 | Rohan Singh  | Electrical Engineering | [rohansingh9001](https://github.com/rohansingh9001) |
 | Saptashrungi | Comp. Sci. Engineering | [Saptashrungi](https://github.com/Saptashrungi)     |
+| Harsh Agarwal| Electrical Engineering | [harsh-ux](https://github.com/harsh-ux)             |
