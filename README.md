@@ -13,4 +13,4 @@ An app to manage the processes for hostels of IIT Jodhpur.
 | Saptashrungi | Comp. Sci. Engineering | [Saptashrungi](https://github.com/Saptashrungi)     |
 | Ridhima Kohli| Comp. Sci. Engineering | [RidhimaKohli](https://github.com/RidhimaKohli)     |
 | Harsh Agarwal| Electrical Engineering | [harsh-ux](https://github.com/harsh-ux)             |
-| Soumya Vaish | Electrical Engineering | [saumyaaaaa](https://github.com/saumyaaaaa)         |
+| Soumya Vaish | Electrical Engineering | [Saumya0206](https://github.com/Saumya0206)         |
