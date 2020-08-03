@@ -18,6 +18,9 @@ An app to manage the processes for hostels of IIT Jodhpur.
    Use any virtual management tool, either `conda` or the `virtualenv` package. `virtualenv` is preffered for this project. To install `virtualenv` enter
    `pip install virtualenv` on your console.
 
+   For linux/MacOS users, add sudo behind the command
+   `sudo pip install virtualenv`
+
    **Note**: Use `pip3` instead of `pip` if you use pip3 to install packages for your python3 installation.
 
 4. Create a new virtual environment. To create a new environment for this project, type `virtualenv hostel-app` on your console. This will create a virtual environment in python to install all our dependencies.
@@ -33,6 +36,8 @@ An app to manage the processes for hostels of IIT Jodhpur.
    If activation is successful, you will see `(hostel-app)` as a prefix to every prompt in your console.
 
 6. Install dependencies. Installing all the dependencies is quite simple, just type `pip install -r requirements.txt` on your console. It should install all the dependencies automatically for you. Repeat this step whenever a new dependency is added/removed.
+
+   Linux/MacOS might use `sudo pip install -r requirements.txt`
 
 Whenever you close the current terminal window, activate the virtual environment again by following step 5.
 
