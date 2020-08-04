@@ -44,4 +44,5 @@ Whenever you close the current terminal window, activate the virtual environment
 | Ridhima Kohli| Comp. Sci. Engineering | [RidhimaKohli](https://github.com/RidhimaKohli)     |
 | Harsh Agarwal| Electrical Engineering | [harsh-ux](https://github.com/harsh-ux)             |
 | Soumya Vaish | Electrical Engineering | [Saumya0206](https://github.com/Saumya0206)         |
+| Vaishnavi    | Electrical Engineering | [vaishnavi415](https://github.com/vaishnavi415)     |
 
