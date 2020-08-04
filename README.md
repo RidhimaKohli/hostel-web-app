@@ -18,6 +18,9 @@ An app to manage the processes for hostels of IIT Jodhpur.
    Use any virtual management tool, either `conda` or the `virtualenv` package. `virtualenv` is preffered for this project. To install `virtualenv` enter
    `pip install virtualenv` on your console.
 
+   For linux/MacOS users, add sudo behind the command
+   `sudo pip install virtualenv`
+
    **Note**: Use `pip3` instead of `pip` if you use pip3 to install packages for your python3 installation.
 
 4. Create a new virtual environment. To create a new environment for this project, type `virtualenv hostel-app` on your console. This will create a virtual environment in python to install all our dependencies.
@@ -34,7 +37,17 @@ An app to manage the processes for hostels of IIT Jodhpur.
 
 6. Install dependencies. Installing all the dependencies is quite simple, just type `pip install -r requirements.txt` on your console. It should install all the dependencies automatically for you. Repeat this step whenever a new dependency is added/removed.
 
+   Linux/MacOS might use `sudo pip install -r requirements.txt`
+
 Whenever you close the current terminal window, activate the virtual environment again by following step 5.
+
+7. To run the server locally use:
+
+                 `python manage.py runserver`
+                 
+   Now open the link "http://127.0.0.1:8000/" (check if its the same link listed in your terminal) in your browser.
+                 
+   Note: Ensure your current directory has manage.py
 
 ## Team
 | Name         | Branch                 | GitHub profile                                      |
@@ -44,4 +57,5 @@ Whenever you close the current terminal window, activate the virtual environment
 | Ridhima Kohli| Comp. Sci. Engineering | [RidhimaKohli](https://github.com/RidhimaKohli)     |
 | Harsh Agarwal| Electrical Engineering | [harsh-ux](https://github.com/harsh-ux)             |
 | Soumya Vaish | Electrical Engineering | [Saumya0206](https://github.com/Saumya0206)         |
+| Vaishnavi    | Electrical Engineering | [vaishnavi415](https://github.com/vaishnavi415)     |
 

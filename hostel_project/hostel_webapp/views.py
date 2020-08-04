@@ -1,6 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse('<h1>Hello World</h1>')
+
+hostels = [
+    'B1',
+    'B2',
+    'B5'
+]
+
+
 # Create your views here.
+def home(request):
+    return render(request, 'hostel_webapp/home.html', {'hostels': hostels})
