@@ -41,6 +41,14 @@ An app to manage the processes for hostels of IIT Jodhpur.
 
 Whenever you close the current terminal window, activate the virtual environment again by following step 5.
 
+7. To run the server locally use:
+
+                 `python manage.py runserver`
+                 
+   Now open the link "http://127.0.0.1:8000/" (check if its the same link listed in your terminal) in your browser.
+                 
+   Note: Ensure your current directory has manage.py
+
 ## Team
 | Name         | Branch                 | GitHub profile                                      |
 | -----------  | ---------------------- | --------------------------------------------------- |
