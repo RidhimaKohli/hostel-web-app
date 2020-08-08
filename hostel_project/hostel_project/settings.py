@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -74,7 +73,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'hostel_project.wsgi.application'
-
+SOCIAL_AUTH_TWITTER_KEY = '505476311030-ad034f4alnifshrn5b42jo9loo7edfg7.apps.googleusercontent.com'
+SOCIAL_AUTH_TWITTER_SECRET = 'v_OQN8DQqmt5nk_C2Yg-atnY'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/home/'
+SOCIAL_AUTH_LOGIN_URL='/accounts'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
