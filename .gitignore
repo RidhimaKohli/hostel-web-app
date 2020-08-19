@@ -1,3 +1,6 @@
+# Virtual Env for the hostel-app project
+hostel-app/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
