@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Hostel Website</title>
+	 <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	 <link href="{% static 'Home-About/css/style.css' %}" rel="stylesheet">
+	 <link rel="stylesheet" href="https://m.w3newbie.com/you-tube.css">
+ </head>
+<body class="home-body" style=" background-image: url({% static 'Home-About/img/img1.jpeg' %})">
+
+<!-- Navigation -->
+
+ <nav class="navbar navbar-expand-md ">
+  <div class="container-fluid">
+	  <button class="btn stylebtn"><a href="{% url 'login' %}">Login</a></button>
+    <button class="btn stylebtn"><a href="{% url 'about' %}">About</a></button>
+  </div>
+ </nav>
+
+
+<div id='heading' class="container  home " >
+  <!--
+ <script>
+	var i = 0;
+    var txt = ' Hostels';
+    var speed = 200;
+
+    function typeWriter() {
+     if (i < txt.length) {
+    
+      document.getElementById("heading").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+      }
+     }
+    typeWriter()
+ </script>
+-->
+<div class="h-hostels letter">H</div>
+<div class="o-hostels letter">O</div>
+<div class="s-hostels letter">S</div>
+<div class="t-hostels letter">T</div>
+<div class="e-hostels letter">E</div>
+<div class="l-hostels letter">L</div>
+<div class="ss-hostels letter">S</div>
+
+</div>
+
+
+
+
+
+<div class="container content home">This website has information about the hostels at IIT Jodhpur. Students can lodge complaints regarding hostel matters including lost and found.</div>
+
+
+
+<div class="container options home">
+  <center>
+	<button class="btn dropdown-toggle stylebtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href='#'>Hostels</a></button>
+  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a class="dropdown-item " href="#">B1</a>
+     <a class="dropdown-item" href="#">B2</a>
+     <a class="dropdown-item" href="#">B3</a>
+     <a class="dropdown-item" href="#">B5</a>
+     <a class="dropdown-item" href="{% url 'g4' %}">G4</a>
+     <a class="dropdown-item" href="#">G5</a>
+     <a class="dropdown-item" href="#">G6</a>
+     <a class="dropdown-item" href="#">I2</a>
+    
+    </div>
+	<button class="btn stylebtn"><a href="{% url 'complaint' %}">Complaints</a></button>
+	<button class="btn stylebtn"><a href='#'>Contact</a></button>
+  </center>
+</div>
+
+
+ </body>
+</html>
+
+
+
+

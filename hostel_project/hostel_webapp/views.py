@@ -9,5 +9,17 @@ hostels = [
 
 
 # Create your views here.
-def home(request):
-    return render(request, 'hostel_webapp/home.html', {'hostels': hostels})
+def index(request):
+    return render(request, 'index.html', {})
+
+def about(request):
+    return render(request, 'about.html', {})
+
+def login(request):
+    return render(request, 'login.html', {})
+
+def complaint(request):
+    return render(request, 'complaint.html', {})
+
+def g4(request):
+    return render(request, 'g4.html', {})
