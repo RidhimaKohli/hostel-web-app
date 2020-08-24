@@ -6,7 +6,7 @@
 
 An app to manage the processes for hostels of IIT Jodhpur.
 
-## Instructions for setup
+## Instructions for setup.
 
 1. Fork and clone this repository. Press the fork button on the top right of this page. Then on your console type `git clone https://github.com/<your-username>/hostel-web-app`. Make sure to replace `<your-username>` with your github username.
 
