@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import Complaint
 
+class ComplaintList(generic.ListView):
+    queryset = Complaint.objects.order_by('date')
+    template_name = 'complaintlist.html'
 
 hostels = [
     'B1',
