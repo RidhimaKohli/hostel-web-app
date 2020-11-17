@@ -8,8 +8,12 @@
 	  <title>Hostel Website</title>
 	 <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -23,37 +27,20 @@
 
  <nav class="navbar navbar-expand-md ">
   <div class="container-fluid">
-	  <button class="btn stylebtn"><a href="{% url 'login' %}">Login</a></button>
-    <button class="btn stylebtn"><a href="{% url 'about' %}">About</a></button>
+	  <a href="{% url 'login' %}"><button class="btn stylebtn btn3 animate__animated animate__slideInDown">Login</button></a>
+    <a href="{% url 'about' %}"><button class="btn stylebtn btn3 animate__animated animate__slideInDown">About</button></a>
   </div>
  </nav>
 
 
-<div id='heading' class="container  home " >
-  <!--
- <script>
-	var i = 0;
-    var txt = ' Hostels';
-    var speed = 200;
-
-    function typeWriter() {
-     if (i < txt.length) {
-    
-      document.getElementById("heading").innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-      }
-     }
-    typeWriter()
- </script>
--->
-<div class="h-hostels letter">H</div>
-<div class="o-hostels letter">O</div>
-<div class="s-hostels letter">S</div>
-<div class="t-hostels letter">T</div>
-<div class="e-hostels letter">E</div>
-<div class="l-hostels letter">L</div>
-<div class="ss-hostels letter">S</div>
+<div id='heading' class="container  home animate__animated animate__slideInDown" >
+  <div class="h " data-content="H">H</div>
+  <div class="o" data-content="O">O</div>
+  <div class="h" data-content="S">S</div>
+  <div class="o" data-content="T">T</div>
+  <div class="h" data-content="E">E</div>
+  <div class="o" data-content="L">L</div>
+  <div class="h" data-content="S">S</div>
 
 </div>
 
@@ -61,15 +48,15 @@
 
 
 
-<div class="container content home">This website has information about the hostels at IIT Jodhpur. Students can lodge complaints regarding hostel matters including lost and found.</div>
+<div class="container content home animate__animated animate__slideInUp">This website has information about the hostels at IIT Jodhpur. Students can lodge complaints regarding hostel matters including lost and found.</div>
 
 
 
-<div class="container options home">
+<div class="container options home animate__animated animate__slideInUp">
   <center>
-	<button class="btn dropdown-toggle stylebtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href='#'>Hostels</a></button>
+	<button class="btn  stylebtn  btn3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hostels</button>
   	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-     <a class="dropdown-item " href="#">B1</a>
+     <a class="dropdown-item" href="#">B1</a>
      <a class="dropdown-item" href="#">B2</a>
      <a class="dropdown-item" href="#">B3</a>
      <a class="dropdown-item" href="#">B5</a>
@@ -77,10 +64,15 @@
      <a class="dropdown-item" href="#">G5</a>
      <a class="dropdown-item" href="#">G6</a>
      <a class="dropdown-item" href="#">I2</a>
-    
+
     </div>
-	<button class="btn stylebtn"><a href="{% url 'complaint' %}">Complaints</a></button>
-	<button class="btn stylebtn"><a href='#'>Contact</a></button>
+	<a href="{% url 'complaint' %}"><button class="btn stylebtn  btn3">Complaints</button></a>
+  {% if user.is_authenticated %}
+        <button class="btn stylebtn  btn3"><a href="{% url 'complaint' %}">Complaints</a></button>
+        {% else %}
+        <button class="btn stylebtn  btn3"><a href="{% url 'login' %}">Complaints</a></button>
+        {% endif %}
+	<a href='#'><button class="btn stylebtn  btn3">Contact</button></a>
   </center>
 </div>
 

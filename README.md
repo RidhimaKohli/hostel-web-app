@@ -47,7 +47,40 @@ Whenever you close the current terminal window, activate the virtual environment
                  
    Now open the link "http://127.0.0.1:8000/" (check if its the same link listed in your terminal) in your browser.
                  
-   Note: Ensure your current directory has manage.py
+   Note: Ensure your current directory has manage.py.
+         Ensure django-allauth is installed.
+
+               `python -m pip install django-allauth`
+
+8. For Google-Auth:
+
+   Create superuser to access admin panel.
+
+            `python manage.py createsuperuser`
+
+   You’re required to provide “username”, “email” and “password” in the terminal. Once you’re done, proceed to start the server:
+
+            `python manage.py runserver`
+
+   Go to (http://127.0.0.1:8000/admin) to access your admin page. Make sure you provide the credentials to login.
+
+   ADD A SITE:
+
+   On the SITES section, click “sites” and fill out the details and click “Save”:
+
+   Domain name: 127.0.0.1:8000
+   Display name: 127.0.0.1:8000
+
+   ADD SOCIAL APPLICATIONS:
+
+   Back to admin homepage, under “SOCIAL ACCOUNTS” section, click “Social applications” to fill out these settings:
+
+   Provider: Google
+   Name: Google API
+   Client id: -
+   Secret key: -
+
+
 
 ## Team
 | Name         | Branch                 | GitHub profile                                      |

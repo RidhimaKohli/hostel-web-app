@@ -33,8 +33,10 @@
  font-family: 'Comfortaa', cursive;
 
 }
+
+
  #heading{
-font-family: 'Luckiest Guy', cursive;
+font-family: 'Roboto', sans-serif;
   display:flex;
   /* background-color: black; */
   font-size: 10vw;
@@ -42,95 +44,104 @@ font-family: 'Luckiest Guy', cursive;
   justify-content: center;
 
  }
- .letter:hover {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  perspective: 1000px;
+ .content{
+  cursor: pointer;
+ }
+
+ .h{
+  animation:shakeH 1s infinite;
+ }
+
+.h:hover{
+  transform: scale(1.5);
 }
 
-@keyframes shake {
+.o{
+  animation:shakeO 1s infinite;
+ }
+
+.o:hover{
+  transform: scale(1.5);
+}
+@keyframes shakeH {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(0, -1px, 0);
   }
   
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(0, 2px, 0);
   }
 
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+    transform: translate3d(0, -4px, 0);
   }
 
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
+    transform: translate3d(0, 4px, 0);
   }
 }
- .h-hostels:hover{
-  color:#e641f2;
 
- }
- .o-hostels:hover{
-  color:#2bb8ff;
-
- }
- .s-hostels:hover{
-  color:#2eeeff;
-
- }
- .t-hostels:hover{
-  color:#05ff22;
-
- }
- .e-hostels:hover{
-  color:#eeff05;
-
- }
- .l-hostels:hover{
-  color:#ff9f19;
-
- }
- .ss-hostels:hover{
-  color:#fc0a0a;
-
- }
-
-
-
-.stylebtn{
-  margin: 30px;
-  border-radius: 50px;
-  opacity:0.8;
+@keyframes shakeO{
+  20%, 80%  {
+    transform: translate3d(0, -1px, 0);
+  }
   
-}
-.stylebtn:hover {
-  
-  border-color: black;
-  opacity: 0.6}
+  10%, 90%{
+    transform: translate3d(0, 2px, 0);
+  }
 
-.stylebtn a {
-  color: #000000;
-  text-decoration:none;
+  40%, 60% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, 4px, 0);
+  }
 }
+
+.h::before {
+  cursor: pointer;
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    color:#fca9d3;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 275ms ease;
+  }
+ .h:hover::before {
+    width: 100%;
+    height: 100%;
+  cursor: pointer;
+  }
+
+ .o::before {
+  cursor: pointer;
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    color: #9fcefc;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 275ms ease;
+  }
+.o:hover::before{
+  width: 100%;
+    height: 100%;
+  cursor: pointer;
+}
+
 .home{
     background-attachment: fixed;
   margin-top: 50px;
 
 }
-
-
-
-/*---Media Queries --*/
-@media (max-width: 992px) {
-
-  }
-@media (max-width: 768px) {
-  
-}
-@media (max-width: 576px) {
-  
-}
-
 
 
 [class*="col-"] {
@@ -148,49 +159,73 @@ font-family: 'Luckiest Guy', cursive;
 
 }
 
+.dropdown-item:hover{
+  animation: dropanime 2s infinite;
 
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
-
-
-
-
-/*
-.glow {
-  font-family: 'Black And White Picture', sans-serif;
-  font-size: 10vw;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}*/
+@keyframes dropanime{
+  0%   {background-color:#4cb0e6;}
+  50%   {background-color: #84c5f0;}
+  100% {background-color:#4cb0e6;}
+}
 
 
+.stylebtn a{
+  color: #000000;
+  text-decoration: none;
+}
 
+.stylebtn {
+  margin: 30px;
+  border-radius: 50px;
+  opacity: 0.8;
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  font-size: 28px;
+  color: #000000;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1;
+  
+}
+
+.stylebtn::after{
+  
+  border-radius: 50px;
+  content:" ";
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(36, 123, 255,0.5);
+  z-index: -1;
+  cursor: pointer;
+  transition: transform 250ms ease-in;
+  text-decoration: none;
+  color: #000000;
+
+      
+}
+
+.btn3::after{
+            text-decoration: none;
+             transform: scaleX(0);
+            transform-origin: right;
+}
+
+.btn3:hover::after { 
+
+            text-decoration: none;
+            transform: scaleX(1);
+            transform-origin: left;    
+
+         } 
 
 /* Style the list */
 ul.breadcrumb {
