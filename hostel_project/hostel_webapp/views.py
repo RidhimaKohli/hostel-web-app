@@ -5,6 +5,8 @@ from .models import Complaint
 class ComplaintList(generic.ListView):
     queryset = Complaint.objects.order_by('date')
     template_name = 'complaintlist.html'
+    def as_view(request):
+        return render(request, 'complaintlist.html', {})
 
 hostels = [
     'B1',
@@ -27,4 +29,6 @@ def complaint(request):
     return render(request, 'complaint.html', {})
 
 def g4(request):
+    
     return render(request, 'g4.html', {})
+

@@ -8,5 +8,5 @@ urlpatterns = [
     path('login.html', views.login, name='login'),
     path('complaint.html', views.complaint, name='complaint'),
     path('g4.html', views.g4, name='g4'),
-    path('complaintlist.html', views.ComplaintList.as_view(), name='complaintlist'),
+    path('complaintlist.html', views.ComplaintList.as_view, name='complaintlist'),
 ]
