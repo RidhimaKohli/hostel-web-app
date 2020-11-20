@@ -34,9 +34,16 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
+				{% if is_secretary %}
 	          <li class="nav-item"><a href="{% url 'index' %}" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="{% url 'complaint' %}" class="nav-link"><span>Complaints</span></a></li>
+			  <li class="nav-item"><a href="{% url 'complaint' %}" class="nav-link"><span>Complaints</span></a></li>
+			  {% else %}
+	          <li class="nav-item"><a href="{% url 'index' %}" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link"><span>About</span></a></li>
+			  <li class="nav-item"><a href="{% url 'complaint' %}" class="nav-link"><span>Complaints</span></a></li>
+			  <li class="nav-item"><a href="{% url 'complaintlist' %}" class="nav-link"><span>Complaintslist</span></a></li>
+			  {% endif %}
 	         
 	        </ul>
 	      </div>
