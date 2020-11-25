@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views import generic
+from django.shortcuts import redirect
+from django.utils import timezone
 from .models import Complaint
+from .forms import ComplaintForm
 
 class ComplaintList(generic.ListView):
     queryset = Complaint.objects.order_by('date')
@@ -26,9 +29,19 @@ def login(request):
     return render(request, 'login.html', {})
 
 def complaint(request):
-    return render(request, 'complaint.html', {})
+    if request.method == "POST":
+        form = ComplaintForm()
+        if form.is_valid():
+            complaint = form.save(commit=False)
+            complaint.author = request.user
+            complaint.date = timezone.now()
+            complaint.save()
+            return redirect('complaint_detail', pk=complaint.pk)
 
-def g4(request):
-    
+    else:
+        form = ComplaintForm()
+    return render(request, 'complaint.html', {'form': form})
+
+def g4(request):    
     return render(request, 'g4.html', {})
 

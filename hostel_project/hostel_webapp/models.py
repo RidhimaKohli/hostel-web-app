@@ -13,10 +13,23 @@ class Student(models.Model):
     
 
 class Complaint(models.Model):
-    content = models.TextField(max_length=500)
+    HOSTEL_CHOICES=(
+        ('B1','B1'),
+        ('B2','B2'),
+        ('B3','B3'),
+        ('B4','B5'),
+        ('G1','G1'),
+        ('G2','G2'),
+        ('G3','G3'),
+        ('G4','G4'),
+        ('G5','G5'),
+        ('G6','G6'),
+        ('I2','I2')
+    )
     title = models.CharField(max_length=100)
+    content = models.TextField(max_length=500)
     complaint_pic = models.ImageField(upload_to=None, height_field=None, width_field=None)
     author = models.ForeignKey(Student, on_delete=models.CASCADE)
     date = models.DateTimeField(default=timezone.now)
-
+    hostel=models.CharField(max_length=2, choices=HOSTEL_CHOICES, default='B1')
 

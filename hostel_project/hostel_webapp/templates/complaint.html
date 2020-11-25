@@ -1,5 +1,5 @@
 {% load static %}
-
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,23 +17,27 @@
 
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form">
-				<span class="contact100-form-title">
-					Lodge...
-				</span>
-
+			<span class="contact100-form-title">
+				Lodge...
+			</span>
+			<form method="POST" class="contact100-form validate-form">
+				{{ form.as_p }}
 				<!-- <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Your Name</span>
 					<input class="input100" type="text" name="name" placeholder="Enter your name">
 					<span class="focus-input100"></span>
 				</div> -->
-
-				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<span class="label-input100">Email</span>
-					<input class="input100" type="text" name="email" placeholder="Enter your email addess">
-					<span class="focus-input100"></span>
+				<div class="wrap-input100 validate-input" data-validate = "Valid title is required">
+				<p><label class="label-input100" for="id_title">Title:</label>
+					<input class="input100" id="id_title" type="text" name="title" maxlength="100" required>
+					<span class="focus-input100"></span></p>
 				</div>
-
+				<div class="wrap-input100 validate-input" data-validate = "Valid content is required">
+					<p><label class="label-input100" for="id_content">Content:</label>
+						<input class="input100" id="id_content" type="text" name="content" maxlength="500" required>
+						<span class="focus-input100"></span></p>
+				</div>
+				<p><label for="id_complaint_pic">Image</label></p>
 				<div class="wrap-input100 input100-select">
 					<span class="label-input100">Your Hostel</span>
 					<div>
@@ -51,11 +55,9 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				
-
-				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+			<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<span class="label-input100">Complaint details with Room Number</span>
-					<textarea class="input100" name="message" placeholder="Your complaint details here..."></textarea>
+					<textarea class="input100" name="message" placeholder="Your complaint details here..."></textarea></p>
 					<span class="focus-input100"></span>
 				</div>
 
@@ -95,3 +97,4 @@
 
 </body>
 </html>
+{% endblock %}
