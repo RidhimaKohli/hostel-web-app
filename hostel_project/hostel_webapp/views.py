@@ -1,6 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Complaint
+from django.shortcuts import redirect
+from django.utils import timezone
+from .models import Complaint,Student
+from .forms import ComplaintForm,StudentForm
+from django.views.decorators.csrf import csrf_exempt
+
+
 
 class ComplaintList(generic.ListView):
     queryset = Complaint.objects.order_by('date')
@@ -25,11 +31,35 @@ def about(request):
 def login(request):
     return render(request, 'login.html', {})
 
+
+
 def complaint(request):
-    return render(request, 'complaint.html', {})
+    if request.method == "POST":
+        form = ComplaintForm(request.POST,request.FILES)
+        if form.is_valid():
+            complaint.student = request.student
+            complaint = form.save(commit=False)
+            complaint.save()
+            return redirect('complaint.html')
+
+    else:
+        form = ComplaintForm()
+    return render(request, 'complaint.html', {'form': form})
+
+
+def register(request):
+    if request.method == "POST":
+        form = StudentForm(request.POST,request.FILES)
+        if form.is_valid():
+            student = form.save(commit=False)
+            student.save()
+            return redirect('register')
+
+    else:
+        form = StudentForm()
+    return render(request, 'home.html', {'form': form})
 
 def g4(request):
-    
     return render(request, 'g4.html', {})
 
 def b1(request):

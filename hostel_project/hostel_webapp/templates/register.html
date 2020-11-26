@@ -4,7 +4,7 @@
 <html lang="en">
 
 <head>
-    <title>Complaints</title>
+    <title>Register Details</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'complaints/vendor/bootstrap/css/bootstrap.min.css' %}">
@@ -17,10 +17,10 @@
     <div class="container-contact100">
         <div class="wrap-contact100">
             <span class="contact100-form-title">
-                Lodge...
+                Student Details
             </span>
             <form method="POST" class="contact100-form validate-form">
-            	{% csrf_token %}
+                {% csrf_token %}
                 {{ form.as_p }}
                 <!-- <div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Your Name</span>
@@ -41,20 +41,7 @@
             </form>
         </div>
     </div>
-    <div id="dropDownSelect1"></div>
-    <!--===============================================================================================-->
-    <script src="{% static 'complaints/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
-    <!--===============================================================================================-->
-    <script src="{% static 'complaints/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-    <!--===============================================================================================-->
-    <script src="{% static 'complaints/vendor/select2/select2.min.js' %}"></script>
-    <script>
-    $(".selection-2").select2({
-        minimumResultsForSearch: 20,
-        dropdownParent: $('#dropDownSelect1')
-    });
-    </script>
-    <!--===============================================================================================-->
+    
     <script src="{% static 'complaints/js/main.js' %}"></script>
 </body>
 

@@ -7,6 +7,7 @@ urlpatterns = [
     path('about.html', views.about, name='about'),
     path('login.html', views.login, name='login'),
     path('complaint.html', views.complaint, name='complaint'),
+    path('register.html', views.register, name='register'),
     path('g4.html', views.g4, name='g4'),
     path('g5.html', views.g5, name='g5'),
     path('g6.html', views.g6, name='g6'),
