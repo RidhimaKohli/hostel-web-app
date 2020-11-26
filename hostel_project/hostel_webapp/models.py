@@ -10,7 +10,6 @@ class Student(models.Model):
     room_number = models.IntegerField()
     avatar = models.ImageField(upload_to=None, height_field=None, width_field=None)
     is_secretary = models.BooleanField(default=False)
-    
 
 class Complaint(models.Model):
     HOSTEL_CHOICES=(

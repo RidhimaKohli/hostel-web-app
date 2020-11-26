@@ -3,7 +3,10 @@ from django.views import generic
 from django.shortcuts import redirect
 from django.utils import timezone
 from .models import Complaint
-from .forms import ComplaintForm
+from .forms import ComplaintForm,StudentForm
+from django.views.decorators.csrf import csrf_exempt
+
+
 
 class ComplaintList(generic.ListView):
     queryset = Complaint.objects.order_by('date')
@@ -28,19 +31,34 @@ def about(request):
 def login(request):
     return render(request, 'login.html', {})
 
+
+
 def complaint(request):
     if request.method == "POST":
-        form = ComplaintForm()
+        form = ComplaintForm(request.POST)
         if form.is_valid():
             complaint = form.save(commit=False)
-            complaint.author = request.user
+            complaint.author = request.student
             complaint.date = timezone.now()
             complaint.save()
-            return redirect('complaint_detail', pk=complaint.pk)
+            return redirect('complaint')
 
     else:
         form = ComplaintForm()
-    return render(request, 'complaint.html', {'form': form})
+    return render(request, 'index.html', {'form': form})
+
+
+def register(request):
+    if request.method == "POST":
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            student = form.save(commit=False)
+            student.save()
+            return redirect('register')
+
+    else:
+        form = StudentForm()
+    return render(request, 'home.html', {'form': form})
 
 def g4(request):    
     return render(request, 'g4.html', {})

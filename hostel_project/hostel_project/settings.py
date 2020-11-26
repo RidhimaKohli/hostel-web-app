@@ -75,7 +75,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'hostel_project.wsgi.application'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '505476311030-ad034f4alnifshrn5b42jo9loo7edfg7.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'v_OQN8DQqmt5nk_C2Yg-atnY'
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/home/'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/register/'
 SOCIAL_AUTH_LOGIN_URL='/accounts'
 
 # Database
