@@ -62,3 +62,31 @@ def register(request):
 def g4(request):
     return render(request, 'g4.html', {})
 
+def b1(request):
+    
+    return render(request, 'b1.html', {})
+
+def b2(request):
+    
+    return render(request, 'b2.html', {})
+
+def b3(request):
+    
+    return render(request, 'b3.html', {})
+
+def b5(request):
+    
+    return render(request, 'b5.html', {})
+
+def g5(request):
+    
+    return render(request, 'g5.html', {})
+
+def g6(request):
+    
+    return render(request, 'g6.html', {})
+
+def i2(request):
+    
+    return render(request, 'i2.html', {})
+
