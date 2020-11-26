@@ -11,6 +11,9 @@ class Student(models.Model):
     avatar = models.ImageField(upload_to=None, height_field=None, width_field=None)
     is_secretary = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.name
+
 class Complaint(models.Model):
     HOSTEL_CHOICES=(
         ('B1','B1'),
@@ -27,8 +30,11 @@ class Complaint(models.Model):
     )
     title = models.CharField(max_length=100)
     content = models.TextField(max_length=500)
-    complaint_pic = models.ImageField(upload_to=None, height_field=None, width_field=None)
-    author = models.ForeignKey(Student, on_delete=models.CASCADE)
+    #complaint_pic = models.ImageField(upload_to=None, height_field=None, width_field=None)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     date = models.DateTimeField(default=timezone.now)
     hostel=models.CharField(max_length=2, choices=HOSTEL_CHOICES, default='B1')
+
+    def __str__(self):
+        return self.title
 

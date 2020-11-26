@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from django.shortcuts import redirect
 from django.utils import timezone
-from .models import Complaint
+from .models import Complaint,Student
 from .forms import ComplaintForm,StudentForm
 from django.views.decorators.csrf import csrf_exempt
 
@@ -35,22 +35,21 @@ def login(request):
 
 def complaint(request):
     if request.method == "POST":
-        form = ComplaintForm(request.POST)
+        form = ComplaintForm(request.POST,request.FILES)
         if form.is_valid():
+            complaint.student = request.student
             complaint = form.save(commit=False)
-            complaint.author = request.student
-            complaint.date = timezone.now()
             complaint.save()
-            return redirect('complaint')
+            return redirect('complaint.html')
 
     else:
         form = ComplaintForm()
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'complaint.html', {'form': form})
 
 
 def register(request):
     if request.method == "POST":
-        form = StudentForm(request.POST)
+        form = StudentForm(request.POST,request.FILES)
         if form.is_valid():
             student = form.save(commit=False)
             student.save()
@@ -60,6 +59,6 @@ def register(request):
         form = StudentForm()
     return render(request, 'home.html', {'form': form})
 
-def g4(request):    
+def g4(request):
     return render(request, 'g4.html', {})
 
